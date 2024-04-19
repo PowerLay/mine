@@ -99,6 +99,13 @@ local FALLING_BLOCKS = {
 	["minecraft:sand"] = true
 }
 
+local BURNABLE_ITEMS = {
+	["minecraft:coal"] = true,
+	["minecraft:coal_block"] = true,
+	["minecraft:charcoal"] = true,
+	["minecraft:blaze_rod"] = true
+}
+
 --#endregion
 --#region WRAPPER----
 
@@ -1501,7 +1508,7 @@ local function sortInventory(sortFuel)
 	--clear fuel slot
 	if sortFuel then
 		local initFuelData = wrapt.getItemDetail(slots.get(FUEL_SLOT))
-		if initFuelData and initFuelData.name ~= "minecraft:coal" then
+		if initFuelData and not BURNABLE_ITEMS[initFuelData.name] then
 			wrapt.select(slots.get(FUEL_SLOT))
 			wrapt.drop()
 		end
@@ -1522,7 +1529,7 @@ local function sortInventory(sortFuel)
 			if curData.name == "minecraft:cobblestone" then
 				wrapt.select(i)
 				wrapt.transferTo(slots.get(BLOCK_SLOT))
-			elseif sortFuel and curData.name == "minecraft:coal" then
+			elseif sortFuel and BURNABLE_ITEMS[curData.name] then
 				wrapt.select(i)
 				wrapt.transferTo(slots.get(FUEL_SLOT))
 			end
