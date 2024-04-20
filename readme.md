@@ -6,9 +6,9 @@ This program is capable of mining an arbitrary area while removing lava, automat
 
 1. Run `pastebin get 7uHd9pPx mine`. Run `mine`.
 1. On startup, the program shows a bunch of info, such as fuel level, slots used for various items, etc.
-1. By default, three slots are assigned: Chests, Coal and Cobblestone.
-Chests are required since they are used to drop off mined items, but the cobblestone and coal slots can be left empty.
-The turtle will store collected coal and cobblestone in those slots and use them when necessary.
+1. By default, three slots are assigned: Chests, Fuel and Cobblestone.
+Chests are required since they are used to drop off mined items, but the cobblestone and fuel slots can be left empty.
+The turtle will store collected fuel and cobblestone in those slots and use them when necessary.
 1. Below that, you will see a list of programs.
 You can run `help <program>` to get a description of any specific program.
 1. Let's assume you want the turtle to branch mine.
