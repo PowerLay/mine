@@ -20,7 +20,7 @@ cfg.localConfig = {
 	--tested with chests from https://www.curseforge.com/minecraft/mc-mods/kibe
 	useEntangledChests = false,
 	--false: refuel from inventory, true: refuel from (a different) entangled chest
-	--if true, the turtle won't store any coal. Instead, when refueling, it will place the entangled chest, grab fuel from it, refuel, and then break the chest.
+	--if true, the turtle won't store any fuel. Instead, when refueling, it will place the entangled chest, grab fuel from it, refuel, and then break the chest.
 	useFuelEntangledChest = false,
 	--true: use two chuck loaders to mine indefinitely without moving into unloaded chunks. 
 	--This doesn't work with chunk loaders from https://www.curseforge.com/minecraft/mc-mods/kibe, but might work with some other mod.
